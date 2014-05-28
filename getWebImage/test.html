@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>python之pyquery 学习 - fox1987的专栏
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="pyquery是jQuery的Python实现，可以用以解析HTML网页的内容。官网文档：http://pythonhosted.org/pyquery/下载：https://pypi.python.org/pypi/pyquery#downloads测试了一下其功能如下：以http://www.verycd.com/topics/2960375/的网页源码为例：" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://static.csdn.net/public/common/toolbar/css/index.css">        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/default/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/fox1987/rss/list" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+</head>
+<body>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://static.csdn.net/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/lovemdx">fox1987的专栏</a></h2>
+            <h3></h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+                <li id="btnContents"><a href="http://blog.csdn.net/lovemdx?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/lovemdx?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/lovemdx/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "fox1987";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/lovemdx";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://bss.csdn.net/cview/reg/?project_id=804&identy_id=839" target="_blank"><font color=red>“程序人生”中国软件开发者职业生涯调查
+</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://bbs.csdn.net/topics/390724670"target="_blank">
+<font color=red>CSDN社区“三八节”特别活动</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://www.csdn.net/article/2014-03-06/2818653"target="_blank">
+<font color=blue>开发者职业生涯调查之未来</font></a>
+
+
+
+
+</div>                    <link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<div id="article_details" class="details">
+    <div class="article_title">
+    <span class="ico ico_type_Original"></span>
+    <h1>
+        <span class="link_title"><a href="/lovemdx/article/details/9946939">
+        python之pyquery 学习
+        </a></span>
+    </h1>
+</div>
+
+    <div class="article_manage">
+        <span class="link_categories">
+        分类：
+            <a href="/fox1987/article/category/1550971">python</a> 
+        </span>
+    <span class="link_postdate">2013-08-13 13:42</span>
+    <span class="link_view" title="阅读次数">169人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(0)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shoucang']);collectArticle('python之pyquery 学习','9946939');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_jubao']);report(9946939,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://www.csdn.net/tag/Python' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">Python</a><a href='http://www.csdn.net/tag/pyquery' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">pyquery</a></div>
+
+    
+<div id="article_content" class="article_content">
+
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+pyquery是jQuery的Python实现，可以用以解析HTML网页的内容。官网文档：<a target="_blank" href="http://pythonhosted.org/pyquery/">http://pythonhosted.org/pyquery/</a></p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+下载：<a target="_blank" title="https://pypi.python.org/pypi/pyquery#downloads" href="https://pypi.python.org/pypi/pyquery#downloads">https://pypi.python.org/pypi/pyquery#downloads</a></p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+测试了一下其功能如下：</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+以<a target="_blank" href="http://www.verycd.com/topics/2960375/">http://www.verycd.com/topics/2960375/</a>的网页源码为例：</p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+</div>
+</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+提取originLink的图片链接地址：</p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum1" style="color:rgb(96,96,96)">   1:</span> #!/usr/bin/python                                                                                                        </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum2" style="color:rgb(96,96,96)">   2:</span> from pyquery import PyQuery as pyq </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum3" style="color:rgb(96,96,96)">   3:</span>&nbsp; </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum4" style="color:rgb(96,96,96)">   4:</span> doc=pyq(url='http://www.verycd.com/topics/2960375/')</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum5" style="color:rgb(96,96,96)">   5:</span> <span style="color:rgb(0,0,255)">for</span> item <span style="color:rgb(0,0,255)">in</span> doc('span.post_origin_img'):</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum6" style="color:rgb(96,96,96)">   6:</span>   print doc(item).attr('originlink')</pre>
+</div>
+</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+执行结果：</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<a target="_blank" href="http://images.cnitblog.com/blog/305638/201308/13133917-6160767b6c3441f981a9a69908d16aed.png"><img title="image" src="http://images.cnitblog.com/blog/305638/201308/13133918-02e6ce0e90ce487f9500e7ab50f36ac1.png" alt="image" width="956" height="56" border="0" style="border:0px; padding-top:0px; padding-left:0px; display:inline; padding-right:0px"></a></p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<strong>注1：</strong>因为在span标签内，并且有class=”post_origin_img” 所以可以通过span.post_origin_img定位到标签。然后该图片对应的是originLink，所以可以对对应的item取其属性为originLink的&#20540;。</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<strong>注2：</strong>这里使用的originlink而不是originLink，是因为测试时，</p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum1" style="color:rgb(96,96,96)">   1:</span> <span style="color:rgb(0,0,255)">for</span> item <span style="color:rgb(0,0,255)">in</span> doc('span.post_origin_img'):</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum2" style="color:rgb(96,96,96)">   2:</span>   print doc(item)                                                                                                        </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum3" style="color:rgb(96,96,96)">   3:</span>   print doc(item).attr('originlink')</pre>
+</div>
+</div>
+<div style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+测试结果：看出其priginlink为小写。原因暂不详。</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<a target="_blank" href="http://images.cnitblog.com/blog/305638/201308/13133918-6efad61feac643c78024f382f1f0e6e8.png"><img title="image" src="http://images.cnitblog.com/blog/305638/201308/13133919-5f6187d4b0c542528a79baa30867ef08.png" alt="image" width="816" height="109" border="0" style="border:0px; padding-top:0px; padding-left:0px; display:inline; padding-right:0px"></a></p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum1" style="color:rgb(96,96,96)">   1:</span> a title=&quot;PDF[2013/08/12 04:33:25]资源更新 共1个文件 42.2MB&quot; href=&quot;/topics/2960275/&quot; onclick=&quot;VeryCD.Track('/stat/topicsHot/');&quot; target=&quot;_blank&quot;<span style="color:rgb(0,0,255)">&gt;</span>《金庸全集-三联典藏版》高清文字版[PDF]<span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">a</span><span style="color:rgb(0,0,255)">&gt;</span>                        <span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">dd</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum2" style="color:rgb(96,96,96)">   2:</span>                                                                                             <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">dd</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;itshot&quot;</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum3" style="color:rgb(96,96,96)">   3:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">a</span> <span style="color:rgb(255,0,0)">id</span><span style="color:rgb(0,0,255)">=&quot;entry_link_2960032&quot;</span> <span style="color:rgb(255,0,0)">title</span><span style="color:rgb(0,0,255)">=&quot;PDF[2013/08/11 05:18:31]资源更新 共1个文件 882.31KB&quot;</span> <span style="color:rgb(255,0,0)">href</span><span style="color:rgb(0,0,255)">=&quot;/topics/2960032/&quot;</span> <span style="color:rgb(255,0,0)">onclick</span><span style="color:rgb(0,0,255)">=&quot;VeryCD.Track('/stat/topicsHot/');&quot;</span> <span style="color:rgb(255,0,0)">target</span><span style="color:rgb(0,0,255)">=&quot;_blank&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;text-decoration:none;&quot;</span><span style="color:rgb(0,0,255)">&gt;&lt;</span><span style="color:rgb(128,0,0)">img</span> <span style="color:rgb(255,0,0)">load-src</span><span style="color:rgb(0,0,255)">=&quot;http://i-7.vcimg.com/crop/7640b510631463a87309ad475a2505c328619(100x100)/thumb.jpg&quot;</span> <span style="color:rgb(255,0,0)">alt</span><span style="color:rgb(0,0,255)">=&quot;img&quot;</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;hot_img&quot;</span> <span style="color:rgb(255,0,0)">height</span><span style="color:rgb(0,0,255)">=&quot;100&quot;</span> <span style="color:rgb(255,0,0)">width</span><span style="color:rgb(0,0,255)">=&quot;100&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;display:inline;&quot;</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum4" style="color:rgb(96,96,96)">   4:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">div</span> <span style="color:rgb(255,0,0)">id</span><span style="color:rgb(0,0,255)">=&quot;entry_2960032&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;display:none;&quot;</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;entry_score_small&quot;</span><span style="color:rgb(0,0,255)">&gt;&lt;/</span><span style="color:rgb(128,0,0)">div</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum5" style="color:rgb(96,96,96)">   5:</span>                         <span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">a</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum6" style="color:rgb(96,96,96)">   6:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">br</span> <span style="color:rgb(0,0,255)">/&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum7" style="color:rgb(96,96,96)">   7:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">a</span> <span style="color:rgb(255,0,0)">title</span><span style="color:rgb(0,0,255)">=&quot;PDF[2013/08/11 05:18:31]资源更新 共1个文件 882.31KB&quot;</span> <span style="color:rgb(255,0,0)">href</span><span style="color:rgb(0,0,255)">=&quot;/topics/2960032/&quot;</span> <span style="color:rgb(255,0,0)">onclick</span><span style="color:rgb(0,0,255)">=&quot;VeryCD.Track('/stat/topicsHot/');&quot;</span> <span style="color:rgb(255,0,0)">target</span><span style="color:rgb(0,0,255)">=&quot;_blank&quot;</span><span style="color:rgb(0,0,255)">&gt;</span>《灵魂21克》文字版[PDF]<span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">a</span><span style="color:rgb(0,0,255)">&gt;</span>                        <span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">dd</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum8" style="color:rgb(96,96,96)">   8:</span>                                                                                             <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">dd</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;itshot&quot;</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum9" style="color:rgb(96,96,96)">   9:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">a</span> <span style="color:rgb(255,0,0)">id</span><span style="color:rgb(0,0,255)">=&quot;entry_link_2861322&quot;</span> <span style="color:rgb(255,0,0)">title</span><span style="color:rgb(0,0,255)">=&quot;EPUB[2011/07/10 02:06:05]资源更新 共47个文件 1.35GB&quot;</span> <span style="color:rgb(255,0,0)">href</span><span style="color:rgb(0,0,255)">=&quot;/topics/2861322/&quot;</span> <span style="color:rgb(255,0,0)">onclick</span><span style="color:rgb(0,0,255)">=&quot;VeryCD.Track('/stat/topicsHot/');&quot;</span> <span style="color:rgb(255,0,0)">target</span><span style="color:rgb(0,0,255)">=&quot;_blank&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;text-decoration:none;&quot;</span><span style="color:rgb(0,0,255)">&gt;&lt;</span><span style="color:rgb(128,0,0)">img</span> <span style="color:rgb(255,0,0)">load-src</span><span style="color:rgb(0,0,255)">=&quot;http://i-7.vcimg.com/crop/349a7faf7ed72283e92b9b071678f6d1155641(100x100)/thumb.jpg&quot;</span> <span style="color:rgb(255,0,0)">alt</span><span style="color:rgb(0,0,255)">=&quot;img&quot;</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;hot_img&quot;</span> <span style="color:rgb(255,0,0)">height</span><span style="color:rgb(0,0,255)">=&quot;100&quot;</span> <span style="color:rgb(255,0,0)">width</span><span style="color:rgb(0,0,255)">=&quot;100&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;display:inline;&quot;</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum10" style="color:rgb(96,96,96)">  10:</span>                         <span style="color:rgb(0,0,255)">&lt;</span><span style="color:rgb(128,0,0)">div</span> <span style="color:rgb(255,0,0)">id</span><span style="color:rgb(0,0,255)">=&quot;entry_2861322&quot;</span> <span style="color:rgb(255,0,0)">style</span><span style="color:rgb(0,0,255)">=&quot;display:none;&quot;</span> <span style="color:rgb(255,0,0)">class</span><span style="color:rgb(0,0,255)">=&quot;entry_score_small&quot;</span><span style="color:rgb(0,0,255)">&gt;&lt;/</span><span style="color:rgb(128,0,0)">div</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum11" style="color:rgb(96,96,96)">  11:</span>                         <span style="color:rgb(0,0,255)">&lt;/</span><span style="color:rgb(128,0,0)">a</span><span style="color:rgb(0,0,255)">&gt;</span></pre>
+</div>
+</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+&nbsp;</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+可以根据id抽取内容，使用#id名字即可：实例如下：</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+&nbsp;</p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum1" style="color:rgb(96,96,96)">   1:</span> #!/usr/bin/python</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum2" style="color:rgb(96,96,96)">   2:</span> from pyquery import PyQuery as pyq </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum3" style="color:rgb(96,96,96)">   3:</span>&nbsp; </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum4" style="color:rgb(96,96,96)">   4:</span> doc=pyq(url='http://www.verycd.com/topics/2960375/')</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum5" style="color:rgb(96,96,96)">   5:</span> <span style="color:rgb(0,0,255)">for</span> item <span style="color:rgb(0,0,255)">in</span> doc('#entry_link_2861322'):</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum6" style="color:rgb(96,96,96)">   6:</span>   print doc(item)</pre>
+</div>
+</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+执行结果：抽取了id为entry_link_2861322的html</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<a target="_blank" href="http://images.cnitblog.com/blog/305638/201308/13133920-080e02356bf74482bb63fbd91a27d981.png"><img title="image" src="http://images.cnitblog.com/blog/305638/201308/13133920-3d93fca8eafc443d8c6d4a1216b37afd.png" alt="image" width="662" height="70" border="0" style="border:0px; padding-top:0px; padding-left:0px; display:inline; padding-right:0px"></a></p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+自己构造测试</p>
+<div id="codeSnippetWrapper" style="font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<div id="codeSnippet" style="border-style:none; overflow:visible; font-size:8pt; font-family:'Courier New',courier,monospace; padding:0px; direction:ltr; line-height:12pt; width:1111px; background-color:rgb(244,244,244)">
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum1" style="color:rgb(96,96,96)">   1:</span> doc=pyq('&lt;<span style="color:rgb(0,128,0)">;p id=&quot;test&quot; class=&quot;test1&quot; attr1=&quot;attr1_value&quot;&gt;hello&lt;/p&gt;')</span></pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum2" style="color:rgb(96,96,96)">   2:</span> print doc('p')</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum3" style="color:rgb(96,96,96)">   3:</span> print doc('p#test')                                                                                                      </pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum4" style="color:rgb(96,96,96)">   4:</span> print doc('p#test.test1')</pre>
+<pre style="font-family:'Courier New'; margin:5px 8px; padding:5px"><span id="lnum5" style="color:rgb(96,96,96)">   5:</span> print doc('p#test.test1').attr('attr1')</pre>
+</div>
+</div>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+执行结果：</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<a target="_blank" href="http://images.cnitblog.com/blog/305638/201308/13133921-15e0623eb0ec488baa0c389afde1d386.png"><img title="image" src="http://images.cnitblog.com/blog/305638/201308/13133921-d5114fdbe57841749f881ce96c265b6a.png" alt="image" width="679" height="97" border="0" style="border:0px; padding-top:0px; padding-left:0px; display:inline; padding-right:0px"></a></p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+&nbsp;</p>
+<p style="margin:14px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+结果上面的测试，我们看以看到使用pyquery，我们可以指定html的tag来抽取，是十分方便的。</p>
+
+</div>
+
+
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="float: right;">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<!-- Baidu Button END -->
+
+
+<!--192.168.100.33-->
+<div class="article_next_prev">
+            <li class="prev_article"><span>上一篇：</span><a href="/lovemdx/article/details/9936089" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">C++异常机制的实现方式和开销分析</a></li>
+            <li class="next_article"><span>下一篇：</span><a href="/lovemdx/article/details/9965755" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">异或链表</a></li>
+</div>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+</div>
+      <dl class="blog-associat-tag">
+        <dt>相关主题推荐</dt>
+        <dd>
+                <a href="http://www.csdn.net/tag/python" target="_blank">python</a> 
+                <a href="http://www.csdn.net/tag/测试" target="_blank">测试</a> 
+                <a href="http://www.csdn.net/tag/图片" target="_blank">图片</a> 
+                <a href="http://www.csdn.net/tag/标签" target="_blank">标签</a> 
+                <a href="http://www.csdn.net/tag/jquery" target="_blank">jquery</a> 
+        </dd>
+    </dl> 
+
+    <div id="ad_cen">
+        <script type="text/javascript">            BAIDU_CLB_SLOT_ID = "117306";</script>
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+    </div>
+    <script type="text/javascript">
+        //new Ad(4, 'ad_cen');
+    </script>
+<div id="comment_title" class="panel_head">
+    查看评论<a name="comments"></a></div>
+<div id="comment_list">
+</div>
+<div id="comment_bar">
+</div>
+<div id="comment_form">
+</div>
+<div class="announce">
+    * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '9946939';
+    var commentscount = 0;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+    <script type="text/javascript">
+    new Ad(5, 'ad_bot');
+    </script>
+<div id="report_dialog">
+</div>
+<div id="d-top" style="display: none;">
+    <a id="d-top-a" href="#" title="回到顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])">
+        <img src="http://static.blog.csdn.net/images/top.png" alt="TOP" /></a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        var d_top = $('#d-top');
+        document.onscroll = function ()
+        {
+            var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+            if (scrTop > 500)
+            {
+                d_top.show();
+            } else
+            {
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function ()
+        {
+            scrollTo(0, 0);
+            this.blur();
+            return false;
+        });
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+<div class="tag_list">
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Java" href="http://www.csdn.net/tag/Java" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Android" href="http://www.csdn.net/tag/android" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://www.csdn.net/tag/ios" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="数据库" href="http://www.csdn.net/tag/数据库" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title="Hadoop" href="http://www.csdn.net/tag/hadoop" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone " target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/云计算" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace " target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/大数据" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="Spark" href="http://www.csdn.net/tag/spark" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+</div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/fox1987" target="_blank">
+    <img src="http://avatar.csdn.net/C/A/3/1_fox1987.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/fox1987" class="user_name" target="_blank">fox1987</a></span>
+</div>
+<div class="interact">
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_guanzhu'])"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>
+</div>
+<div id="blog_medal">
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>15336次</span></li>
+    <li>积分：<span>1651分</span></li>
+    <li>排名：<span>第7192名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>155篇</span></li>
+    <li>转载：<span>20篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>0条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550959">C</a><span>(18)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550961">shell</a><span>(12)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550967">C++</a><span>(19)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550971">python</a><span>(14)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550973">Database-nosql-leveldb</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550979">Database-nosql-cassandra</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550983">tools</a><span>(16)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550985">linux</a><span>(32)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550987">面试题目</a><span>(6)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550989">network</a><span>(6)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550991">设计模式</a><span>(13)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550993">other</a><span>(6)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550995">分布式</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550997">opensource</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1550999">hadoop</a><span>(4)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551001">YII</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551003">PHP</a><span>(4)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551005">web</a><span>(3)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551007">算法</a><span>(7)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551009">爬虫</a><span>(5)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1551011">内存管理</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1585211">Database-nosql-hbase</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lovemdx/article/category/1773757">Database- mysql</a><span>(8)</span>
+</li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="http://blog.csdn.net/lovemdx/article/month/2014/03">2014年03月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2014/02">2014年02月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2014/01">2014年01月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2013/12">2013年12月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2013/11">2013年11月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2013/10">2013年10月</a><span>(10)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2013/09">2013年09月</a><span>(14)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2013/08">2013年08月</a><span>(131)</span></li><li><a href="http://blog.csdn.net/lovemdx/article/month/2012/01">2012年01月</a><span>(1)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head"><span>阅读排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/lovemdx/article/details/9829605" title="解决Eclipse java was started but returned exit code = 1问题">解决Eclipse java was started but returned exit code = 1问题</a><span>(564)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829627" title="PHP 发送HTTP  post请求发送和获取">PHP 发送HTTP  post请求发送和获取</a><span>(358)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/10224153" title="Linux下和windows下使用goagent">Linux下和windows下使用goagent</a><span>(265)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9978145" title="A星寻路算法介绍">A星寻路算法介绍</a><span>(191)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9946939" title="python之pyquery 学习">python之pyquery 学习</a><span>(169)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/10017797" title="strcmp函数的使用的一个坑">strcmp函数的使用的一个坑</a><span>(164)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/10051959" title="GarsiaWachs算法">GarsiaWachs算法</a><span>(161)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829611" title="windows 下YII框架初试">windows 下YII框架初试</a><span>(160)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/10242455" title="hbase 的相关文章">hbase 的相关文章</a><span>(149)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829577" title="ubuntu apt-get /usr/bin/dpkg returned an error code 的解决办法">ubuntu apt-get /usr/bin/dpkg returned an error code 的解决办法</a><span>(146)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/lovemdx/article/details/10490937" title="linux 下的多线程编程">linux 下的多线程编程</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9946939" title="python之pyquery 学习">python之pyquery 学习</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9936089" title="C++异常机制的实现方式和开销分析">C++异常机制的实现方式和开销分析</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9936025" title="深度探索C++对象模型读书笔记-第七章站在对象模型的尖端">深度探索C++对象模型读书笔记-第七章站在对象模型的尖端</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9915673" title="python异常如何全面捕获">python异常如何全面捕获</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9903131" title="深度探索C++对象模型读书笔记-第六章执行期语意学">深度探索C++对象模型读书笔记-第六章执行期语意学</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829689" title="Hadoop&amp;ndash;Task 相关">Hadoop&amp;ndash;Task 相关</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829687" title="Hadoop&amp;ndash;TaskTracker 相关">Hadoop&amp;ndash;TaskTracker 相关</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9829685" title="虚机创建">虚机创建</a><span>(0)</span>
+</li>
+<li>
+<a href="/lovemdx/article/details/9965755" title="异或链表">异或链表</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend"></ul>
+</div>
+<script type="text/javascript">
+ new Ad(12, 'ad_commend');
+</script>    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=1242701"></script>
+<script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js?' + Math.floor(new Date() / 120000).toString(36) + '="></' + 'script>');
+</script>
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript" src="http://zz.csdn.net/js/count.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a>"
+                    + "<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+    });
+</script>
+
+    </div>
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+</body>
+</html>

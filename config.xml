@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     azhe_liu 2013-12-18
+     display tool
+     note: you can add new project by fill name, resolution and other attribute of project
+-->
+<projects>
+	<project>
+	    <name>cp5dtu</name>
+	    <resolution>
+	        <width>540</width>
+	        <height>960</height>
+	    </resolution>
+	</project>
+</projects>
